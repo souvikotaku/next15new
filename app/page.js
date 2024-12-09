@@ -14,9 +14,7 @@ export default function Home() {
           priority
         />
         <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
+          <li>deployed again.</li>
           <li>Save and see your changes instantly.</li>
         </ol>
 
