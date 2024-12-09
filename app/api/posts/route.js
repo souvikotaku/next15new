@@ -1,4 +1,3 @@
-// app/api/posts/route.js
 export async function GET() {
   const posts = [
     { id: "1", title: "Learn React" },

@@ -1,4 +1,5 @@
-// app/page.js
+import Link from "next/link";
+
 async function fetchPosts() {
   const res = await fetch("http://localhost:3000/api/posts");
   if (!res.ok) {
@@ -16,7 +17,7 @@ export default async function Home() {
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
-            <a href={`/posts/${post.id}`}>{post.title}</a>
+            <Link href={`/posts/${post.id}`}>{post.title}</Link>
           </li>
         ))}
       </ul>
