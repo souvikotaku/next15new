@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 async function fetchPosts() {
-  const res = await fetch("http://localhost:3000/api/posts");
+  const res = await fetch("https://next15-practice.netlify.app/api/posts");
   if (!res.ok) {
     throw new Error("Failed to fetch posts");
   }
