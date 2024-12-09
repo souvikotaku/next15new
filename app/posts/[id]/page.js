@@ -9,7 +9,11 @@ async function fetchPost(id) {
 }
 
 export default async function Post({ params }) {
-  const { id } = params;
+  // Ensure params is resolved properly
+  const resolvedParams = await params;
+  console.log("Resolved Params:", resolvedParams);
+
+  const { id } = resolvedParams;
 
   if (!id) {
     return (
