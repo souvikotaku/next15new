@@ -1,5 +1,9 @@
 async function fetchPost(id) {
-  const res = await fetch("https://next15-practice.netlify.app/api/posts");
+  const baseUrl =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000"
+      : "https://next15-practice.netlify.app"; // Replace with your actual Netlify domain
+  const res = await fetch(`${baseUrl}/api/posts`);
   if (!res.ok) {
     throw new Error("Failed to fetch posts");
   }
